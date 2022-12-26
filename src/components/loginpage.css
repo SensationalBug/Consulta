@@ -1,0 +1,52 @@
+.login-container {
+  height: 70%;
+}
+
+.login-box {
+  height: 100%;
+  border-radius: 10px;
+  background-color: #36465e;
+  box-shadow: 10px 10px 20px;
+}
+
+.col-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6cddc9;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.col-login {
+  display: flex;
+  color: #ffffff;
+  font-size: 1.5rem;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 1366px) {
+  .login-container {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .login-box {
+    width: 80%;
+  }
+  .col-login {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .col-img {
+    display: none;
+  }
+  .login-box {
+    border-radius: 0px;
+    box-shadow: none;
+  }
+}

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Container } from 'reactstrap';
+import './homePage.css'
+import { SidebarComp } from "./Sidebar";
 
 export const HomePage = () => {
   return (
-    <div>
-      <h1>HomePage</h1>
+    <div className="w-100">
+      <SidebarComp/>
     </div>
   );
 };

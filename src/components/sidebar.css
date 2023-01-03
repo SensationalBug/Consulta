@@ -1,0 +1,9 @@
+.sidebar {
+  height: 100vh;
+  color: #fff;
+  border: none;
+}
+
+.salir-button {
+  border-radius: 0px;
+}

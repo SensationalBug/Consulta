@@ -1,7 +1,14 @@
+.form-container{
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .form-col {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -19,8 +26,8 @@
   border-bottom: 1px #6cddc9 solid !important;
 }
 
-.check{
-    background-color: #6cddc9 !important;
+.check {
+  background-color: #6cddc9 !important;
 }
 
 .login-button {
@@ -32,6 +39,6 @@
 }
 
 .login-button:hover {
-    background-color: #6cddc882 !important;
-    color: rgba(255, 255, 255, 0.54) !important;
+  background-color: #6cddc882 !important;
+  color: rgba(255, 255, 255, 0.54) !important;
 }

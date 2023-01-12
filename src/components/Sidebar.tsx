@@ -34,25 +34,32 @@ export const SidebarComp = () => {
       <Sidebar
         rootStyles={{
           [`.${sidebarClasses.container}`]: {
-            backgroundColor: "#36465e",
-            height: "100vh",
-            display: "flex",
             color: "#fff",
+            display: "flex",
+            height: "100vh",
             flexDirection: "column",
+            backgroundColor: "#1d2532",
             justifyContent: "space-between",
           },
         }}
       >
         <Menu>
           <div className="text-center" onClick={() => collapseSidebar()}>
-            <CgMaze size="5em" />
+            <CgMaze size="5em" className="main-logo"/>
           </div>
           <Col>
-            <MenuItem> Documentation </MenuItem>
-            <MenuItem> Calendar </MenuItem>
-            <MenuItem> Calendar </MenuItem>
-            <MenuItem> Calendar </MenuItem>
-            <MenuItem> Calendar </MenuItem>
+            <SubMenu label="Data" icon={<CgMaze size="3em" />}>
+              <MenuItem> Agenda </MenuItem>
+              <MenuItem> Usuarios </MenuItem>
+            </SubMenu>
+            <SubMenu label="Pages" icon={<CgMaze size="3em" />}>
+              <MenuItem> Agenda </MenuItem>
+              <MenuItem> Usuarios </MenuItem>
+            </SubMenu>
+            <SubMenu label="Charts" icon={<CgMaze size="3em" />}>
+              <MenuItem> Agenda </MenuItem>
+              <MenuItem> Usuarios </MenuItem>
+            </SubMenu>
           </Col>
         </Menu>
         <Button className="salir-button" onClick={() => alert()}>

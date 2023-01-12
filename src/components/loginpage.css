@@ -1,12 +1,13 @@
 .login-container {
-  height: 70%;
+  height: 100vh !important;
+  width: 100vw !important;
+  overflow-y: hidden;
 }
 
 .login-box {
-  height: 100%;
-  border-radius: 10px;
-  background-color: #36465e;
-  box-shadow: 10px 10px 20px;
+  height: 100vh;
+  width: 100vw !important;
+  background-color: var(--sixth-color);
 }
 
 .col-img {
@@ -14,8 +15,6 @@
   align-items: center;
   justify-content: center;
   background-color: #6cddc9;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
 
 .col-login {

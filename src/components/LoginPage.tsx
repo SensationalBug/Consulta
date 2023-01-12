@@ -12,16 +12,16 @@ export const LoginPage = () => {
   return (
     <>
       {!user ? (
-        <Container className="login-container">
+        <div className="login-container">
           <Row className="login-box">
-            <Col className="col col-img col-md-6">
+            <Col className="col-img col-7">
               <CgMaze className="login-icon" size="20em" color="#36465e" />
             </Col>
-            <Col className="col col-login col-md-6 col-12">
+            <Col className="col-login col-5">
               <Form />
             </Col>
           </Row>
-        </Container>
+        </div>
       ) : (
         <HomePage />
       )}

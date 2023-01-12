@@ -7,7 +7,7 @@ import { Input, Button, Col, Label, FormGroup } from "reactstrap";
 export const Form = () => {
   const { user, userState } = useContext(UserContext);
   return (
-    <>
+    <div className="form-container">
       <h2 className="text-center py-3">Nombre de la empresa</h2>
       <Col className="form-col col-12">
         <FormGroup className="col-md-9 col-11">
@@ -40,6 +40,6 @@ export const Form = () => {
           Iniciar Sesion
         </Button>
       </Col>
-    </>
+    </div>
   );
 };

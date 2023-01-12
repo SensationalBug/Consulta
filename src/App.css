@@ -1,13 +1,16 @@
+:root {
+  --first-color: #16c1c8;
+  --second-color: #49cccc;
+  --third-color: #7cd7cf;
+  --fourth-color: #aee1d3;
+  --fifth-color: #e1ecd6;
+  --sixth-color: #1d2532;
+}
+
 .App {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: rgb(97, 39, 48);
-  background: linear-gradient(
-    29deg,
-    rgba(97, 39, 48, 1) 0%,
-    rgba(215, 100, 118, 1) 59%,
-    rgba(190, 125, 136, 1) 100%
-  );
+  background-color: var(--fifth-color);
 }

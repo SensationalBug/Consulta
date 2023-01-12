@@ -1,9 +1,14 @@
-.sidebar {
-  height: 100vh;
-  color: #fff;
-  border: none;
+.main-logo {
+  width: 40%;
+  margin: 10px;
+  transition: 0.5s;
+  border-radius: 20%;
+  color: var(--sixth-color);
+  background-color: #e1ecd6;
 }
 
 .salir-button {
-  border-radius: 0px;
+  border-radius: 0;
+  color: var(--sixth-color);
+  background-color: #e1ecd6;
 }

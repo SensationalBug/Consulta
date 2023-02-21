@@ -1,70 +1,97 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./sidebar.css";
+import { Menu, Sidebar, MenuItem, sidebarClasses } from "react-pro-sidebar";
 import {
-  Sidebar,
-  Menu,
-  MenuItem,
-  SubMenu,
-  useProSidebar,
-  sidebarClasses,
-} from "react-pro-sidebar";
-import { CgMaze } from "react-icons/cg";
-import { Button, Col } from "reactstrap";
-import { UserContext } from "../context/userContext";
-import swal from "sweetalert";
+  BsCalendar2Date,
+  BsFileEarmarkBarGraph,
+  BsColumnsGap,
+} from "react-icons/bs";
+import {
+  HiOutlineUsers,
+  HiOutlineUser,
+  HiOutlineKey,
+  HiOutlineSupport,
+} from "react-icons/hi";
+import { ExitButton } from "./subComponents/ExitButton";
+import { LogoButton } from "./subComponents/LogoButton";
 
 export const SidebarComp = () => {
-  const { collapseSidebar } = useProSidebar();
-  const { userState } = useContext(UserContext);
-
-  const alert = () => {
-    swal({
-      title: "Cerrar Sesión",
-      text: "Seguro que quieres cerrar sesión?",
-      icon: "info",
-      dangerMode: true,
-      buttons: ["Cancelar", "Aceptar"],
-    }).then((response) => {
-      response ? userState() : null;
-    });
-  };
-
   return (
     <>
       <Sidebar
         rootStyles={{
           [`.${sidebarClasses.container}`]: {
-            color: "#fff",
             display: "flex",
             height: "100vh",
             flexDirection: "column",
-            backgroundColor: "#1d2532",
+            backgroundColor: "#1D2532",
             justifyContent: "space-between",
           },
         }}
       >
-        <Menu>
-          <div className="text-center" onClick={() => collapseSidebar()}>
-            <CgMaze size="5em" className="main-logo"/>
-          </div>
-          <Col>
-            <SubMenu label="Data" icon={<CgMaze size="3em" />}>
-              <MenuItem> Agenda </MenuItem>
-              <MenuItem> Usuarios </MenuItem>
-            </SubMenu>
-            <SubMenu label="Pages" icon={<CgMaze size="3em" />}>
-              <MenuItem> Agenda </MenuItem>
-              <MenuItem> Usuarios </MenuItem>
-            </SubMenu>
-            <SubMenu label="Charts" icon={<CgMaze size="3em" />}>
-              <MenuItem> Agenda </MenuItem>
-              <MenuItem> Usuarios </MenuItem>
-            </SubMenu>
-          </Col>
+        <Menu
+          menuItemStyles={{
+            button: () => {
+              return {
+                transition: ".2s",
+                color: "#8fe1f5",
+                "&:hover": {
+                  color: "black",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  backgroundColor: "#8fe1f5",
+                  borderTopLeftRadius: "50px",
+                  borderBottomLeftRadius: "50px",
+                },
+              };
+            },
+          }}
+        >
+          <LogoButton />
+          <MenuItem
+            className="menu-chart"
+            icon={<BsColumnsGap className="chart-logo" size="2em" />}
+          >
+            <label>Panel de control</label>
+          </MenuItem>
+          <MenuItem
+            className="menu-chart"
+            icon={<HiOutlineUser className="chart-logo" size="2em" />}
+          >
+            <label>Usuarios</label>
+          </MenuItem>
+          <MenuItem
+            className="menu-chart"
+            icon={<HiOutlineUsers className="chart-logo" size="2em" />}
+          >
+            <label>Clientes</label>
+          </MenuItem>
+          <MenuItem
+            className="menu-chart"
+            icon={<HiOutlineKey className="chart-logo" size="2em" />}
+          >
+            <label>Roles y permisos</label>
+          </MenuItem>
+          <MenuItem
+            className="menu-chart"
+            icon={<BsCalendar2Date className="chart-logo" size="2em" />}
+          >
+            <label>Gestión de citas</label>
+          </MenuItem>
+          <MenuItem
+            className="menu-chart"
+            icon={<BsFileEarmarkBarGraph className="chart-logo" size="2em" />}
+          >
+            <label>Informes</label>
+          </MenuItem>
+          <MenuItem
+            className="menu-chart"
+            icon={<HiOutlineSupport className="chart-logo" size="2em" />}
+          >
+            <label>Soporte y ayuda</label>
+          </MenuItem>
         </Menu>
-        <Button className="salir-button" onClick={() => alert()}>
-          Salir
-        </Button>
+        <ExitButton />
       </Sidebar>
     </>
   );

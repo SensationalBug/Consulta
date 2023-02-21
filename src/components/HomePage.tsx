@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
+import { SidebarComp } from "./Sidebar";
 import { Container } from 'reactstrap';
 import './homePage.css'
-import { SidebarComp } from "./Sidebar";
 
 export const HomePage = () => {
   return (

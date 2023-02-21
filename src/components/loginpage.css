@@ -1,12 +1,6 @@
-.login-container {
-  height: 100vh !important;
-  width: 100vw !important;
-  overflow-y: hidden;
-}
-
 .login-box {
-  height: 100vh;
-  width: 100vw !important;
+  height: 100% !important;
+  width: 100% !important;
   background-color: var(--sixth-color);
 }
 
@@ -14,13 +8,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6cddc9;
+  background-color: var(--bg-color);
 }
 
 .col-login {
   display: flex;
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   flex-direction: column;
   justify-content: space-around;
 }

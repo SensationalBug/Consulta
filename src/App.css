@@ -1,16 +1,13 @@
 :root {
-  --first-color: #16c1c8;
-  --second-color: #49cccc;
-  --third-color: #7cd7cf;
+  --bg-color: #8fe1f5;
   --fourth-color: #aee1d3;
-  --fifth-color: #e1ecd6;
-  --sixth-color: #1d2532;
+  --sixth-color: #1D2532;
 }
 
 .App {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: var(--fifth-color);
+  background-color: var(--bg-color);
 }

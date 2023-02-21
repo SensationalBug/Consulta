@@ -2,13 +2,64 @@
   width: 40%;
   margin: 10px;
   transition: 0.5s;
+  color: var(--bg-color);
   border-radius: 20%;
+}
+
+.logo-container:hover {
+  transition: 0.5s;
+  background-color: var(--bg-color);
+}
+
+.menu-chart{
+  margin-top: 20px;
+}
+
+.logo-container:hover .main-logo,
+.menu-chart:hover .chart-logo {
+  animation: shake 0.3s;
   color: var(--sixth-color);
-  background-color: #e1ecd6;
 }
 
 .salir-button {
+  border: none;
+  display: flex;
+  color: #e1ecd6;
   border-radius: 0;
+  transition: 0.5s;
+  justify-content: center;
+  background-color: var(--sixth-color);
+}
+
+.salir-button .chart-logo {
+  margin-right: 10px;
+}
+
+.salir-button:hover {
+  font-weight: bold;
+  background-color: var(--bg-color);
   color: var(--sixth-color);
-  background-color: #e1ecd6;
+}
+
+.exit-logo,
+.chart-label {
+  display: none;
+}
+
+.exit-label {
+  font-weight: bold;
+  animation: shake 0.3s;
+  color: var(--bg-color);
+}
+
+@keyframes shake {
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
 }

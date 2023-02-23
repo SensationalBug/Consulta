@@ -1,0 +1,32 @@
+.homepage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: red;
+    color: white;
+}
+.level{
+    width: 95%;
+    height: 30%;
+}
+
+.window, .window-text, .window-number{
+    margin: auto;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window-text{
+    flex-direction: column;
+}
+
+.window-number{
+    font-size: 10em;
+}
+
+.window-title{
+    font-size: 25px;
+    text-align: center;
+}

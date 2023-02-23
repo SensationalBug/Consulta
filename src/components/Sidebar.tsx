@@ -22,7 +22,7 @@ import { Roles } from "../Pages/Roles";
 import { Appointments } from "../Pages/Appointments";
 import { Data } from "../Pages/Data";
 import { Help } from "../Pages/Help";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 export const SidebarComp = () => {

@@ -5,7 +5,7 @@ import { CgMaze } from "react-icons/cg";
 import { SidebarComp } from "./Sidebar";
 import React, { useContext } from "react";
 import { UserContext } from "../context/userContext";
-import { HomePage } from "./HomePage";
+import { BrowserRouter } from "react-router-dom";
 
 export const LoginPage = () => {
   const { user } = useContext(UserContext);
@@ -22,7 +22,9 @@ export const LoginPage = () => {
         </Row>
       ) : (
         <>
-          <SidebarComp />
+          <BrowserRouter>
+            <SidebarComp />
+          </BrowserRouter>
         </>
       )}
     </>

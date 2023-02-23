@@ -22,12 +22,13 @@ import { Roles } from "../Pages/Roles";
 import { Appointments } from "../Pages/Appointments";
 import { Data } from "../Pages/Data";
 import { Help } from "../Pages/Help";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 export const SidebarComp = () => {
+  const location = useLocation();
   return (
     <>
-      <BrowserRouter>
         <Sidebar
           rootStyles={{
             [`.${sidebarClasses.container}`]: {
@@ -105,16 +106,19 @@ export const SidebarComp = () => {
           </Menu>
           <ExitButton />
         </Sidebar>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/data" element={<Data />} />
-          <Route path="/help" element={<Help />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/roles" element={<Roles />} />
-          <Route path="/clients" element={<Clients />} />
-          <Route path="/appointments" element={<Appointments />} />
-        </Routes>
-      </BrowserRouter>
+        <TransitionGroup component={null}>
+          <CSSTransition key={location.pathname} classNames="fade" timeout={300}>
+            <Routes location={location}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/data" element={<Data />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="/users" element={<Users />} />
+              <Route path="/roles" element={<Roles />} />
+              <Route path="/clients" element={<Clients />} />
+              <Route path="/appointments" element={<Appointments />} />
+            </Routes>
+          </CSSTransition>
+        </TransitionGroup>
     </>
   );
 };

@@ -18,7 +18,3 @@
   align-items: center;
   justify-content: center;
 }
-
-.Page:nth-child(0){
-  background-color: red;
-}

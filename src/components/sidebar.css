@@ -11,7 +11,7 @@
   background-color: var(--bg-color);
 }
 
-.menu-chart{
+.menu-chart {
   margin-top: 20px;
 }
 
@@ -50,6 +50,20 @@
   font-weight: bold;
   animation: shake 0.3s;
   color: var(--bg-color);
+}
+
+/* REACT TRANSITION GROUP */
+.fade-enter {
+  opacity: 0.5;
+  transform: scale(0.99);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 400ms, transform 400ms;
+}
+.fade-exit {
+  display: none;
 }
 
 @keyframes shake {

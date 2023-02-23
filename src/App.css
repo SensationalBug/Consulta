@@ -1,13 +1,24 @@
 :root {
   --bg-color: #8fe1f5;
   --fourth-color: #aee1d3;
-  --sixth-color: #1D2532;
+  --sixth-color: #1d2532;
 }
 
 .App {
   height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+}
+
+.Page {
+  width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg-color);
+}
+
+.Page:nth-child(0){
+  background-color: red;
 }

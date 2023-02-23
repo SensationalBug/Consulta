@@ -30,7 +30,9 @@ export const ExitButton = () => {
         className={`chart-logo ${showIcon ? "exit-logo" : undefined}`}
         size="1.5em"
       />
-      <label className={`exit-label ${showIcon ? undefined : "chart-label"}`}>Salir</label>
+      <label className={`exit-label ${showIcon ? undefined : "chart-label"}`}>
+        Salir
+      </label>
     </Button>
   );
 };

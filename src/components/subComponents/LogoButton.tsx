@@ -1,7 +1,7 @@
 import React from "react";
 import { BiMenu } from "react-icons/bi";
 
-import { useProSidebar } from "react-pro-sidebar";
+import { MenuItem, useProSidebar } from "react-pro-sidebar";
 
 export const LogoButton = () => {
   const { collapseSidebar } = useProSidebar();

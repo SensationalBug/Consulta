@@ -1,0 +1,10 @@
+.error-message {
+  display: flex;
+  height: 100vh;
+  font-size: 10em;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--sixth-color);
+  background-color: var(--bg-color);
+}

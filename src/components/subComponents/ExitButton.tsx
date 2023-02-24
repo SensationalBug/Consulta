@@ -2,21 +2,22 @@ import { UserContext } from "../../context/userContext";
 import React, { useState, useContext } from "react";
 import { CgClose } from "react-icons/cg";
 import { Button } from "reactstrap";
-import swal from "sweetalert";
+import Swal from "sweetalert2";
 import "../sidebar.css";
 
 export const ExitButton = () => {
   const { userState } = useContext(UserContext);
   const [showIcon, setShowIcon] = useState(true);
   const alert = () => {
-    swal({
-      title: "Cerrar Sesión",
-      text: "Seguro que quieres cerrar sesión?",
-      icon: "info",
-      dangerMode: true,
-      buttons: ["Cancelar", "Aceptar"],
-    }).then((response) => {
-      response ? userState() : null;
+    Swal.fire({
+      title: "Hello World",
+      icon: "warning",
+      showCancelButton: true,
+      showConfirmButton: true,
+      cancelButtonText: "Cancel",
+      confirmButtonText:"Cerrar sesión",
+    }).then((value) => {
+      value.isConfirmed ? userState() : null;
     });
   };
   return (
